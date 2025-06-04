@@ -1,34 +1,100 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
-import reactLogo from "./assets/react.svg";
+import Badge from "./components/Badge/Badge";
 import "./App.css";
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
-		<>
-			<div>
-				<a href="https://vite.dev" target="_blank" rel="noreferrer">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button type="button" onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
-		</>
+		<article>
+			<h1>Components</h1>
+			<section className="doc-section doc-section-badge">
+				<h2>Badges</h2>
+				<h3>Square</h3>
+				<ul>
+					<li>
+						<Badge shape="square" color="grey">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="square" color="red">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="square" color="yellow">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="square" color="green">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="square" color="blue">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="square" color="indigo">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="square" color="purple">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="square" color="pink">
+							Badge
+						</Badge>
+					</li>
+				</ul>
+				<h3>Pill</h3>
+				<ul>
+					<li>
+						<Badge shape="pill" color="grey">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="pill" color="red">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="pill" color="yellow">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="pill" color="green">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="pill" color="blue">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="pill" color="indigo">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="pill" color="purple">
+							Badge
+						</Badge>
+					</li>
+					<li>
+						<Badge shape="pill" color="pink">
+							Badge
+						</Badge>
+					</li>
+				</ul>
+			</section>
+		</article>
 	);
 }
 
