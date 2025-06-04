@@ -11,6 +11,11 @@ body {
 	font-family: Inter, Arial, sans-serif;
 }
 
+h1 {
+	margin-block: 0.67em;
+	font-size: 2em;
+}
+
 .star {
 	height: 30px;
 	width: 30px;
