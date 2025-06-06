@@ -1,5 +1,7 @@
+import { BsBasket, BsCloudUpload } from "react-icons/bs";
 import Badge from "./components/Badge/Badge";
 import Banner from "./components/Banner/index";
+import Card from "./components/Card/index";
 import "./App.css";
 
 function App() {
@@ -161,6 +163,30 @@ function App() {
 						<Banner variant="neutral">
 							<Banner.Title>Update available</Banner.Title>
 						</Banner>
+					</li>
+				</ul>
+			</section>
+			<section className="doc-section doc-section-card">
+				<h2>Card</h2>
+
+				<ul>
+					<li>
+						<Card icon={<BsCloudUpload />}>
+							<Card.Title>Easy Development</Card.Title>
+							<Card.Content>
+								Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
+								Et magna sit morbi lobortis.
+							</Card.Content>
+						</Card>
+					</li>
+					<li>
+						<Card icon={<BsBasket />} iconBackgroundColor="green">
+							<Card.Title>Easy Development</Card.Title>
+							<Card.Content>
+								Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
+								Et magna sit morbi lobortis.
+							</Card.Content>
+						</Card>
 					</li>
 				</ul>
 			</section>
