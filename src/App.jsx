@@ -2,7 +2,11 @@ import { BsBasket, BsCloudUpload } from "react-icons/bs";
 import Badge from "./components/Badge/Badge";
 import Banner from "./components/Banner/index";
 import Card from "./components/Card/index";
+import Testimonails from "./components/Testimonials/index";
 import "./App.css";
+
+import quotePersonSmall from "./assets/img/quote-person-small.jpeg";
+import quotePerson from "./assets/img/quote-person.jpeg";
 
 function App() {
 	return (
@@ -187,6 +191,63 @@ function App() {
 								Et magna sit morbi lobortis.
 							</Card.Content>
 						</Card>
+					</li>
+				</ul>
+			</section>
+			<section className="doc-section doc-section-testimonials">
+				<h2>Testimonials</h2>
+				<ul>
+					<li>
+						<Testimonails backgroundColor="blue">
+							<Testimonails.Picture
+								src={quotePerson}
+								srcSet={`${quotePersonSmall} 500w, ${quotePerson} 1900w`}
+								sizes="(max-width: 768px) 500px, 1900px"
+								alt="Picture of May Andersons"
+							/>
+							<Testimonails.Quote
+								name="May Andersons"
+								company="Workcation"
+								companyTitle="CTO"
+							>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								urna nulla vitae laoreet augue. Amet feugiat est integer dolor
+								auctor adipiscing nunc urna, sit.
+							</Testimonails.Quote>
+						</Testimonails>
+					</li>
+					<li>
+						<Testimonails>
+							<Testimonails.Logo src="./svg/logo.svg" />
+							<Testimonails.Quote
+								name="May Andersons"
+								company="Workcation"
+								companyTitle="CTO"
+							>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+								expedita voluptas culpa sapiente alias molestiae. Numquam
+								corrupti in laborum sed rerum et corporis.
+							</Testimonails.Quote>
+						</Testimonails>
+					</li>
+					<li>
+						<Testimonails backgroundColor="green">
+							<Testimonails.Picture
+								src={quotePerson}
+								srcSet={`${quotePersonSmall} 500w, ${quotePerson} 1900w`}
+								sizes="(max-width: 768px) 500px, 1900px"
+								alt="Picture of May Andersons"
+							/>
+							<Testimonails.Quote
+								name="May Andersons"
+								company="Workcation"
+								companyTitle="CTO"
+							>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+								urna nulla vitae laoreet augue. Amet feugiat est integer dolor
+								auctor adipiscing nunc urna, sit.
+							</Testimonails.Quote>
+						</Testimonails>
 					</li>
 				</ul>
 			</section>
