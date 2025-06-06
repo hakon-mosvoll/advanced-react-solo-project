@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	font-family: Inter, Arial, sans-serif;
+}
+
+h1 {
+	margin-block: 0.67em;
+	font-size: 2em;
+}

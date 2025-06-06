@@ -1,0 +1,52 @@
+:root {
+	--carc-icon-size: 24px;
+}
+
+.card {
+	background-color: #f9fafb;
+	border-radius: 8px;
+	padding: calc(1.5rem + 24px) 2rem 1.5rem;
+	text-align: center;
+	position: relative;
+}
+
+.card:hover {
+	box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+	margin-top: 0;
+	font-weight: 500;
+	color: #111827;
+}
+
+.card-content {
+	color: #6b7280;
+}
+
+.card-icon {
+	position: absolute;
+	top: calc(var(--carc-icon-size) - var(--carc-icon-size) * 2);
+	left: calc(50% - var(--carc-icon-size));
+	width: 48px;
+	height: 48px;
+	border-radius: 6px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-icon > svg {
+	display: block;
+	width: var(--carc-icon-size);
+	height: var(--carc-icon-size);
+}
+
+.card-icon-blue {
+	background-color: #3f75fe;
+}
+
+.card-icon-green {
+	background-color: #34d399;
+}

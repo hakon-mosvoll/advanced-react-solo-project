@@ -1,0 +1,142 @@
+.testimonials {
+	padding: 0 3rem;
+	display: flex;
+	gap: 2rem;
+	position: relative;
+	color: #111827;
+	background-color: #f9fafb;
+}
+
+.testimonials-quote {
+	font-size: 1.25rem;
+	align-self: center;
+	max-width: 75ch;
+}
+
+.testimonials-blockquote {
+	margin: 0;
+}
+
+.testimonials-name {
+	font-weight: bold;
+	font-size: 0.85rem;
+}
+
+.testimonials-company {
+	font-size: 0.85rem;
+}
+
+.testimonials-company-title {
+	font-size: 0.85rem;
+}
+
+/* Testimonials colors */
+.testimonials-green {
+	color: white;
+}
+
+.testimonials-green.testimonials-with-picture::before {
+	background-color: #47aa5d;
+}
+
+.testimonials-green.testimonials-with-logo {
+	background-color: #47aa5d;
+}
+
+.testimonials-blue {
+	color: white;
+}
+
+.testimonials-blue.testimonials-with-picture::before {
+	background-color: #2545b8;
+}
+
+.testimonials-blue.testimonials-with-logo {
+	background-color: #2545b8;
+}
+
+.testimonials-purple {
+	color: white;
+}
+
+.testimonials-purple.testimonials-with-picture::before {
+	background-color: #a9229b;
+}
+
+.testimonials-purple.testimonials-with-logo {
+	background-color: #a9229b;
+}
+
+/* Testimonials with picture */
+
+.testimonials-with-picture {
+	background: 0;
+}
+
+.testimonials-with-picture::before {
+	content: "";
+	background-color: #f9fafb;
+	position: absolute;
+	top: 2rem;
+	bottom: 2rem;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.testimonials-picture {
+	max-height: 450px;
+	border-radius: 10px;
+}
+
+.testimonials-with-picture .testimonials-quote {
+	background-image: url(./svg/quotes.svg);
+	padding-top: 2.5rem;
+	background-repeat: no-repeat;
+}
+
+.testimonials-with-picture .testimonials-name {
+	display: block;
+}
+
+/* Testimonials with logo */
+
+.testimonials-with-logo {
+	padding: 2rem 3rem;
+	gap: 1rem;
+	flex-direction: column;
+	text-align: center;
+	background-image: url(./svg/dot-pattern.svg);
+	background-size: 150px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+.testimoinals-logo {
+	max-height: 2.5rem;
+}
+
+.testimonials-with-logo .testimonials-company,
+.testimonials-with-logo .testimonials-company-title {
+	color: #6b7280;
+}
+
+@media (max-width: 768px) {
+	.testimonials {
+		flex-direction: column;
+		padding: 1rem;
+	}
+
+	.testimonials-with-picture::before {
+		top: 7rem;
+		bottom: 0;
+	}
+
+	.testimonials-picture {
+		max-width: 100%;
+	}
+
+	.testimonials-with-logo {
+		text-align: left;
+	}
+}

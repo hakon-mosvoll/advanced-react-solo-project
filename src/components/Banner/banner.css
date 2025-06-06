@@ -1,0 +1,79 @@
+:root {
+	--banner-padding: 1rem;
+	--banner-icon-size: 1rem;
+}
+
+.banner {
+	border-radius: 6px;
+	padding: var(--banner-padding);
+	min-height: var(--banner-icon-size);
+	box-sizing: content-box;
+	background-position: var(--banner-padding) var(--banner-padding);
+	background-size: var(--banner-icon-size);
+	background-repeat: no-repeat;
+}
+
+.banner > .banner-title {
+	padding-left: calc(var(--banner-padding) + var(--banner-icon-size));
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.banner > .banner-content {
+	padding-left: calc(var(--banner-padding) + var(--banner-icon-size));
+	font-size: 0.9rem;
+	line-height: 1.25rem;
+	margin: 0.5rem 0 0;
+}
+
+.banner-neutral {
+	background-color: #eff6ff;
+	background-image: url(./svg/info.svg);
+}
+
+.banner-neutral > .banner-title {
+	color: #1e40af;
+}
+
+.banner-neutral > .banner-content {
+	color: #1c51b9;
+}
+
+.banner-error {
+	background-image: url(./svg/error.svg);
+	background-color: #fef2f2;
+}
+
+.banner-error > .banner-title {
+	color: #92400e;
+}
+
+.banner-error > .banner-content {
+	color: #b45309;
+}
+
+.banner-warning {
+	background-image: url(./svg/warning.svg);
+	background-color: #fffbeb;
+}
+
+.banner-warning > .banner-title {
+	color: #92400e;
+}
+
+.banner-warning > .banner-content {
+	color: #b45309;
+}
+
+.banner-success {
+	background-image: url(./svg/success.svg);
+	background-color: #ecfdf5;
+}
+
+.banner-success > .banner-title {
+	color: #065f46;
+}
+
+.banner-success > .banner-content {
+	color: #047857;
+}

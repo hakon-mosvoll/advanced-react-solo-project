@@ -1,5 +1,7 @@
 import classnames from "classnames";
 
+import "./badge.css";
+
 export default function Badge({ children, shape = "square", color = "grey" }) {
 	// TODO: Ask designer about color and statuses
 
