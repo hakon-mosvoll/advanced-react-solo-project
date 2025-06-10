@@ -7,6 +7,7 @@ import "./App.css";
 
 import quotePersonSmall from "./assets/img/quote-person-small.jpeg";
 import quotePerson from "./assets/img/quote-person.jpeg";
+import logo from "./assets/svg/logo.svg";
 
 function App() {
 	return (
@@ -218,7 +219,7 @@ function App() {
 					</li>
 					<li>
 						<Testimonails>
-							<Testimonails.Logo src="./svg/logo.svg" />
+							<Testimonails.Logo src={logo} />
 							<Testimonails.Quote
 								name="May Andersons"
 								company="Workcation"

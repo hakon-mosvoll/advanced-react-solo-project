@@ -28,7 +28,7 @@
 
 .banner-neutral {
 	background-color: #eff6ff;
-	background-image: url(./svg/info.svg);
+	background-image: url($svg/info.svg);
 }
 
 .banner-neutral > .banner-title {
@@ -40,7 +40,7 @@
 }
 
 .banner-error {
-	background-image: url(./svg/error.svg);
+	background-image: url($svg/error.svg);
 	background-color: #fef2f2;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .banner-warning {
-	background-image: url(./svg/warning.svg);
+	background-image: url($svg/warning.svg);
 	background-color: #fffbeb;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .banner-success {
-	background-image: url(./svg/success.svg);
+	background-image: url($svg/success.svg);
 	background-color: #ecfdf5;
 }
 
