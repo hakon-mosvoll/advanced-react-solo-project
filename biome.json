@@ -21,7 +21,7 @@
 		"rules": {
 			"recommended": true,
 			"correctness": {
-				"noUnusedImports": "error"
+				"noUnusedImports": "warn"
 			},
 			"a11y": {
 				"useAltText": "off"

@@ -24,6 +24,6 @@ export default function Testimonials({ children, backgroundColor }) {
 
 function hasChildOfType(componentName, children) {
 	return Children.toArray(children).some((child) => {
-		return isValidElement(child) && child.type.name === componentName;
+		return isValidElement(child) && child.type.displayName === componentName;
 	});
 }

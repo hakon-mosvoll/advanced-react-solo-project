@@ -5,3 +5,5 @@ export default function TestimonialsLogo({ src, className, ...rest }) {
 
 	return <img className={classNamesCombined} src={src} {...rest} />;
 }
+
+TestimonialsLogo.displayName = "TestimonialsLogo";
