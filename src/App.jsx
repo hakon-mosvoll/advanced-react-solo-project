@@ -3,13 +3,18 @@ import Badge from "./components/Badge/Badge";
 import Banner from "./components/Banner/index";
 import Card from "./components/Card/index";
 import Testimonails from "./components/Testimonials/index";
+import Tooltip from "./components/Tooltip/index";
 import "./App.css";
+
+import { useState } from "react";
 
 import quotePersonSmall from "./assets/img/quote-person-small.jpeg";
 import quotePerson from "./assets/img/quote-person.jpeg";
 import logo from "./assets/svg/logo.svg";
 
 function App() {
+	const [tooltipOpen, setTooltipOpen] = useState(false);
+
 	return (
 		<article>
 			<h1>Components</h1>
@@ -249,6 +254,33 @@ function App() {
 								auctor adipiscing nunc urna, sit.
 							</Testimonails.Quote>
 						</Testimonails>
+					</li>
+				</ul>
+			</section>
+			<section className="doc-section doc-section-tooltip">
+				<h2>Tooltip (Work in progress)</h2>
+				<ul>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<button
+									type="button"
+									onClick={() => setTooltipOpen((prev) => !prev)}
+								>
+									Click me
+								</button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								color="blue"
+								open={tooltipOpen}
+								position="top"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
 					</li>
 				</ul>
 			</section>

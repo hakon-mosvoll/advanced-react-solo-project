@@ -1,0 +1,9 @@
+.tooltip-content {
+	display: none;
+}
+
+.tooltip-content.tooltip-content-open {
+	display: block;
+	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+}
