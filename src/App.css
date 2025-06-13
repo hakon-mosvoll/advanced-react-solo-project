@@ -1,5 +1,6 @@
 .doc-section {
 	margin-top: 3rem;
+	margin-bottom: 5rem;
 }
 
 .doc-section > ul {
@@ -8,7 +9,13 @@
 }
 
 .doc-section > ul > li {
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.doc-list-horizontal {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .doc-section-badge ul {

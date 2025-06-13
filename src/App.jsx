@@ -15,6 +15,9 @@ import logo from "./assets/svg/logo.svg";
 
 function App() {
 	const [tooltipOpen, setTooltipOpen] = useState(false);
+	const [tooltipTwoOpen, setTooltipTwoOpen] = useState(false);
+	const [tooltipThreeOpen, setTooltipThreeOpen] = useState(false);
+	const [tooltipFourOpen, setTooltipFourOpen] = useState(false);
 
 	return (
 		<article>
@@ -260,12 +263,12 @@ function App() {
 			</section>
 			<section className="doc-section doc-section-tooltip">
 				<h2>Tooltip (Work in progress)</h2>
-				<ul>
+				<ul class="doc-list-horizontal">
 					<li>
 						<Tooltip>
 							<Tooltip.Trigger>
 								<Button onClick={() => setTooltipOpen((prev) => !prev)}>
-									Click me
+									Click me (top)
 								</Button>
 							</Tooltip.Trigger>
 							<Tooltip.Content
@@ -273,8 +276,67 @@ function App() {
 								icon={<BsCloudUpload />}
 								color="blue"
 								open={tooltipOpen}
-								position="top"
 								onClose={() => setTooltipOpen(false)}
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button onClick={() => setTooltipTwoOpen((prev) => !prev)}>
+									Click me (bottom)
+								</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								color="blue"
+								open={tooltipTwoOpen}
+								position="bottom"
+								onClose={() => setTooltipTwoOpen(false)}
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button onClick={() => setTooltipThreeOpen((prev) => !prev)}>
+									Click me (left)
+								</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								color="blue"
+								open={tooltipThreeOpen}
+								position="left"
+								onClose={() => setTooltipThreeOpen(false)}
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button onClick={() => setTooltipFourOpen((prev) => !prev)}>
+									Click me (right)
+								</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								color="blue"
+								open={tooltipFourOpen}
+								position="right"
+								onClose={() => setTooltipFourOpen(false)}
 							>
 								This is a tooltip with some content. It can be used to provide
 								additional information.

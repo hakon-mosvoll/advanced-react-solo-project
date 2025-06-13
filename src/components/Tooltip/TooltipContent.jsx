@@ -8,10 +8,12 @@ export default function TooltipContent({
 	title,
 	open,
 	onClose,
+	position = "top",
 	...rest
 }) {
 	const tooltipContentClasses = classNames("tooltip-content", className, {
 		"tooltip-content-open": open,
+		[`tooltip-content-${position}`]: position,
 	});
 
 	const titleId = useId();

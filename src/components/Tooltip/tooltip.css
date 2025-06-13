@@ -1,22 +1,40 @@
 .tooltip {
 	--base-padding-vertical: 1rem;
-	--base-padding-horizontal: 1.5rem;
+	--base-padding-horizontal: 1.25rem;
 
 	position: relative;
-	padding-bottom: 5rem;
 	width: fit-content;
 }
 
 .tooltip-content {
 	display: none;
 	position: absolute;
-	bottom: calc(100% + 0.5rem);
 	min-width: 25rem;
 	max-width: 80ch;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	background-color: #262626;
 	padding: var(--base-padding-vertical) var(--base-padding-horizontal);
 	color: #c7c7c7;
+}
+
+.tooltip-content-top {
+	bottom: calc(100% + 0.5rem);
+}
+
+.tooltip-content-bottom {
+	top: calc(100% + 0.5rem);
+}
+
+.tooltip-content-left {
+	right: calc(100% + 0.5rem);
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.tooltip-content-right {
+	left: calc(100% + 0.5rem);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .tooltip-content.tooltip-content-open {
@@ -31,7 +49,7 @@
 .tooltip-content-body {
 	line-height: 1.5;
 	font-size: 0.875rem;
-	margin: 0.5rem 0 0;
+	margin: 0.25rem 0 0;
 }
 
 .tooltip-content-close {
