@@ -5,6 +5,7 @@ import Card from "./components/Card/index";
 import Testimonails from "./components/Testimonials/index";
 import Tooltip from "./components/Tooltip/index";
 import "./App.css";
+import Button from "./components/Button/Button";
 
 import { useState } from "react";
 
@@ -263,12 +264,9 @@ function App() {
 					<li>
 						<Tooltip>
 							<Tooltip.Trigger>
-								<button
-									type="button"
-									onClick={() => setTooltipOpen((prev) => !prev)}
-								>
+								<Button onClick={() => setTooltipOpen((prev) => !prev)}>
 									Click me
-								</button>
+								</Button>
 							</Tooltip.Trigger>
 							<Tooltip.Content
 								title="Tooltip Title"
@@ -276,6 +274,7 @@ function App() {
 								color="blue"
 								open={tooltipOpen}
 								position="top"
+								onClose={() => setTooltipOpen(false)}
 							>
 								This is a tooltip with some content. It can be used to provide
 								additional information.
