@@ -15,6 +15,7 @@
 	background-color: #262626;
 	padding: var(--base-padding-vertical) var(--base-padding-horizontal);
 	color: #c7c7c7;
+	z-index: 1000;
 }
 
 .tooltip-content:before {
