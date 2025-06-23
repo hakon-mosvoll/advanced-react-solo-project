@@ -8,6 +8,7 @@ export default function TooltipContent({
 	title,
 	open,
 	onClose,
+	icon,
 	position = "top",
 	...rest
 }) {
@@ -15,6 +16,7 @@ export default function TooltipContent({
 	const [adjustedPosition, setAdjustedPosition] = useState(position);
 	const titleId = useId();
 
+	// Simple adjustment of the position of the tooltip if it goes out of bounds
 	useLayoutEffect(() => {
 		if (!tooltipRef.current) return;
 
@@ -48,23 +50,26 @@ export default function TooltipContent({
 
 	return (
 		<div ref={tooltipRef} className={tooltipContentClasses} {...rest}>
-			<strong
-				id={`tooltip-content-title-${titleId}`}
-				className="tooltip-content-title"
-			>
-				{title}
-			</strong>
-			<BsX
-				className="tooltip-content-close"
-				onClick={onClose}
-				aria-label="Close tooltip"
-			/>
-			<p
-				className="tooltip-content-body"
-				aria-labelledby={`tooltip-content-title-${titleId}`}
-			>
-				{children}
-			</p>
+			<div className="tooltip-content-icon">{icon}</div>
+			<div className="tooltip-content-text">
+				<strong
+					id={`tooltip-content-title-${titleId}`}
+					className="tooltip-content-title"
+				>
+					{title}
+				</strong>
+				<BsX
+					className="tooltip-content-close"
+					onClick={onClose}
+					aria-label="Close tooltip"
+				/>
+				<p
+					className="tooltip-content-body"
+					aria-labelledby={`tooltip-content-title-${titleId}`}
+				>
+					{children}
+				</p>
+			</div>
 		</div>
 	);
 }

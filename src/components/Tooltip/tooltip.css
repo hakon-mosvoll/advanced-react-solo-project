@@ -72,7 +72,12 @@
 }
 
 .tooltip-content.tooltip-content-open {
-	display: block;
+	display: flex;
+	gap: 0.75rem;
+}
+
+.tooltip-content-icon > svg {
+	margin-top: 0.25rem;
 }
 
 .tooltip-content-title {
