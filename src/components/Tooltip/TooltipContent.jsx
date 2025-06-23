@@ -1,13 +1,13 @@
 import classNames from "classnames";
 import { useId, useLayoutEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import { BsX } from "react-icons/bs";
+import { TooltipContext } from "./Tooltip";
 
 export default function TooltipContent({
 	children,
 	className,
 	title,
-	open,
-	onClose,
 	icon,
 	position = "top",
 	...rest
@@ -15,6 +15,7 @@ export default function TooltipContent({
 	const tooltipRef = useRef(null);
 	const [adjustedPosition, setAdjustedPosition] = useState(position);
 	const titleId = useId();
+	const { open, setOpen } = useContext(TooltipContext);
 
 	// Simple adjustment of the position of the tooltip if it goes out of bounds
 	useLayoutEffect(() => {
@@ -60,7 +61,9 @@ export default function TooltipContent({
 				</strong>
 				<BsX
 					className="tooltip-content-close"
-					onClick={onClose}
+					onClick={() => {
+						setOpen(false);
+					}}
 					aria-label="Close tooltip"
 				/>
 				<p
