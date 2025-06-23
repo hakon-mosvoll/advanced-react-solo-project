@@ -258,7 +258,10 @@ function App() {
 				<h2>Tooltip (Work in progress)</h2>
 				<ul className="doc-list-horizontal">
 					<li>
-						<Tooltip>
+						<Tooltip
+							onClose={() => console.log("Tooltip closed")}
+							onOpen={() => console.log("Tooltip opened")}
+						>
 							<Tooltip.Trigger>
 								<Button>Click me (top)</Button>
 							</Tooltip.Trigger>
