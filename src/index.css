@@ -9,6 +9,7 @@ body {
 	display: flex;
 	justify-content: center;
 	font-family: Inter, Arial, sans-serif;
+	background-color: #e5e7eb;
 }
 
 h1 {

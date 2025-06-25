@@ -13,7 +13,7 @@ import logo from "./assets/svg/logo.svg";
 
 function App() {
 	return (
-		<article>
+		<article className="doc-article">
 			<h1>Components</h1>
 			<section className="doc-section doc-section-badge">
 				<h2>Badges</h2>
@@ -256,6 +256,7 @@ function App() {
 			</section>
 			<section className="doc-section doc-section-tooltip">
 				<h2>Tooltip (Work in progress)</h2>
+				<h3>Tooltip position</h3>
 				<ul className="doc-list-horizontal">
 					<li>
 						<Tooltip
@@ -317,6 +318,131 @@ function App() {
 								icon={<BsCloudUpload />}
 								color="blue"
 								position="right"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+				</ul>
+				<h3>Tooltip color</h3>
+				{/* TODO: Talk to designer about colors, styles, states (warning, error, info...) */}
+				{/* TODO: Talk to designer about contrast to background (white tooltip) */}
+				<ul className="doc-list-horizontal">
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (black)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="black"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (white)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="white"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (bold-blue)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="bold-blue"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (light-blue)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="light-blue"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (bold-purple)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="bold-purple"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (light-purple)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="light-purple"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (bold-green)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="bold-green"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (light-green)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								variant="light-green"
 							>
 								This is a tooltip with some content. It can be used to provide
 								additional information.

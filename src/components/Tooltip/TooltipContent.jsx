@@ -9,6 +9,7 @@ export default function TooltipContent({
 	className,
 	title,
 	icon,
+	variant = "black",
 	position = "top",
 	...rest
 }) {
@@ -47,6 +48,7 @@ export default function TooltipContent({
 	const tooltipContentClasses = classNames("tooltip-content", className, {
 		"tooltip-content-open": open,
 		[`tooltip-content-${adjustedPosition}`]: adjustedPosition,
+		[`tooltip-content-${variant}`]: variant,
 	});
 
 	return (

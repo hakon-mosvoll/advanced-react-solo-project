@@ -12,10 +12,10 @@
 	min-width: 25rem;
 	max-width: 80ch;
 	border-radius: 0.5rem;
-	background-color: #262626;
 	padding: var(--base-padding-vertical) var(--base-padding-horizontal);
-	color: #c7c7c7;
 	z-index: 1000;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px
+		rgba(0, 0, 0, 0.05);
 }
 
 .tooltip-content:before {
@@ -32,7 +32,7 @@
 .tooltip-content-top:before {
 	bottom: -0.95rem;
 	left: 3rem;
-	border-color: #262626 transparent transparent transparent;
+	border-color: transparent;
 }
 
 .tooltip-content-bottom {
@@ -42,7 +42,7 @@
 .tooltip-content-bottom:before {
 	top: -0.95rem;
 	left: 3rem;
-	border-color: transparent transparent #262626 transparent;
+	border-color: transparent;
 }
 
 .tooltip-content-left {
@@ -55,7 +55,7 @@
 	right: -0.95rem;
 	top: 50%;
 	transform: translateY(-50%);
-	border-color: transparent transparent transparent #262626;
+	border-color: transparent;
 }
 
 .tooltip-content-right {
@@ -68,7 +68,7 @@
 	left: -0.95rem;
 	top: 50%;
 	transform: translateY(-50%);
-	border-color: transparent #262626 transparent transparent;
+	border-color: transparent;
 }
 
 .tooltip-content.tooltip-content-open {
@@ -81,7 +81,6 @@
 }
 
 .tooltip-content-title {
-	color: white;
 	font-size: 0.875rem;
 	font-weight: 500;
 }
@@ -98,4 +97,278 @@
 	cursor: pointer;
 	right: calc(var(--base-padding-horizontal) - 0.25rem);
 	top: calc(var(--base-padding-vertical) - 0.25rem);
+}
+
+/* TODO: Consider to use preprocessor (sass, less...) */
+
+/* **************************
+ * Tooltip black
+ **************************** */
+
+.tooltip-content-black {
+	--tooltip-bg-black: #262626;
+	background-color: var(--tooltip-bg-black);
+	color: #c7c7c7;
+}
+
+.tooltip-content-black .tooltip-content-title {
+	color: white;
+}
+
+.tooltip-content-black .tooltip-content-icon > svg {
+	fill: #6b7280;
+}
+
+.tooltip-content-black.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-black);
+}
+
+.tooltip-content-black.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-black);
+}
+
+.tooltip-content-black.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-black);
+}
+
+.tooltip-content-black.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-black);
+}
+
+/* **************************
+ * Tooltip white
+ **************************** */
+
+.tooltip-content-white {
+	--tooltip-bg-white: #ffffff;
+	background-color: var(--tooltip-bg-white);
+	color: #6b7280;
+}
+
+.tooltip-content-white .tooltip-content-title {
+	color: #111827;
+}
+
+.tooltip-content-white .tooltip-content-icon > svg {
+	fill: #6b7280;
+}
+
+.tooltip-content-white.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-white);
+}
+
+.tooltip-content-white.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-white);
+}
+
+.tooltip-content-white.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-white);
+}
+
+.tooltip-content-white.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-white);
+}
+
+/* **************************
+ * Tooltip light bold blue
+ **************************** */
+
+.tooltip-content-bold-blue {
+	--tooltip-bg-bold-blue: #1e40af;
+	background-color: var(--tooltip-bg-bold-blue);
+	color: #e8edff;
+}
+
+.tooltip-content-bold-blue .tooltip-content-title {
+	color: #ffffff;
+}
+
+.tooltip-content-bold-blue .tooltip-content-icon > svg {
+	fill: #7ea6f2;
+}
+
+.tooltip-content-bold-blue.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-bold-blue);
+}
+
+.tooltip-content-bold-blue.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-bold-blue);
+}
+
+.tooltip-content-bold-blue.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-bold-blue);
+}
+
+.tooltip-content-bold-blue.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-bold-blue);
+}
+
+/* **************************
+ * Tooltip light blue
+ **************************** */
+
+.tooltip-content-light-blue {
+	--tooltip-bg-light-blue: #e0e7ff;
+	background-color: var(--tooltip-bg-light-blue);
+	color: #1c51b9;
+}
+
+.tooltip-content-light-blue .tooltip-content-title {
+	color: #1e40af;
+}
+
+.tooltip-content-light-blue .tooltip-content-icon > svg {
+	fill: #1c51b9;
+}
+
+.tooltip-content-light-blue.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-light-blue);
+}
+
+.tooltip-content-light-blue.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-light-blue);
+}
+
+.tooltip-content-light-blue.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-light-blue);
+}
+
+.tooltip-content-light-blue.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-light-blue);
+}
+
+/* **************************
+ * Tooltip bold purple
+ **************************** */
+
+.tooltip-content-bold-purple {
+	--tooltip-bg-bold-purple: #a9229b;
+	background-color: var(--tooltip-bg-bold-purple);
+	color: #ffe9fd;
+}
+
+.tooltip-content-bold-purple .tooltip-content-title {
+	color: #ffffff;
+}
+
+.tooltip-content-bold-purple .tooltip-content-icon > svg {
+	fill: #f462e6;
+}
+
+.tooltip-content-bold-purple.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-bold-purple);
+}
+
+.tooltip-content-bold-purple.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-bold-purple);
+}
+
+.tooltip-content-bold-purple.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-bold-purple);
+}
+
+.tooltip-content-bold-purple.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-bold-purple);
+}
+
+/* **************************
+ * Tooltip light purple
+ **************************** */
+
+.tooltip-content-light-purple {
+	--tooltip-bg-light-purple: #fff3fc;
+	background-color: var(--tooltip-bg-light-purple);
+	color: #c7369e;
+}
+
+.tooltip-content-light-purple .tooltip-content-title {
+	color: #a9229b;
+}
+
+.tooltip-content-light-purple .tooltip-content-icon > svg {
+	fill: #c7369e;
+}
+
+.tooltip-content-light-purple.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-light-purple);
+}
+
+.tooltip-content-light-purple.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-light-purple);
+}
+
+.tooltip-content-light-purple.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-light-purple);
+}
+
+.tooltip-content-light-purple.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-light-purple);
+}
+
+/* **************************
+ * Tooltip bold green
+ **************************** */
+
+.tooltip-content-bold-green {
+	--tooltip-bg-bold-green: #47aa5d;
+	background-color: var(--tooltip-bg-bold-green);
+	color: #e3ffe9;
+}
+
+.tooltip-content-bold-green .tooltip-content-title {
+	color: #ffffff;
+}
+
+.tooltip-content-bold-green .tooltip-content-icon > svg {
+	fill: #c1ffcf;
+}
+
+.tooltip-content-bold-green.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-bold-green);
+}
+
+.tooltip-content-bold-green.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-bold-green);
+}
+
+.tooltip-content-bold-green.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-bold-green);
+}
+
+.tooltip-content-bold-green.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-bold-green);
+}
+
+/* **************************
+ * Tooltip light green
+ **************************** */
+
+.tooltip-content-light-green {
+	--tooltip-bg-light-green: #e7fff3;
+	background-color: var(--tooltip-bg-light-green);
+	color: #3c8c4e;
+}
+
+.tooltip-content-light-green .tooltip-content-title {
+	color: #137a2a;
+}
+
+.tooltip-content-light-green .tooltip-content-icon > svg {
+	fill: #41a557;
+}
+
+.tooltip-content-light-green.tooltip-content-top:before {
+	border-top-color: var(--tooltip-bg-light-green);
+}
+
+.tooltip-content-light-green.tooltip-content-bottom:before {
+	border-bottom-color: var(--tooltip-bg-light-green);
+}
+
+.tooltip-content-light-green.tooltip-content-left:before {
+	border-left-color: var(--tooltip-bg-light-green);
+}
+
+.tooltip-content-light-green.tooltip-content-right:before {
+	border-right-color: var(--tooltip-bg-light-green);
 }
