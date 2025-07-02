@@ -1,4 +1,9 @@
-import { BsBasket, BsCloudUpload } from "react-icons/bs";
+import {
+	BsBasket,
+	BsCloudUpload,
+	BsCode,
+	BsFillBookmarkCheckFill,
+} from "react-icons/bs";
 import Badge from "./components/Badge/Badge";
 import Banner from "./components/Banner/index";
 import Card from "./components/Card/index";
@@ -176,26 +181,29 @@ function App() {
 			<section className="doc-sectio">
 				<h2>Card</h2>
 
-				<ul className="doc-list">
-					<li>
-						<Card icon={<BsCloudUpload />}>
-							<Card.Title>Easy Development</Card.Title>
-							<Card.Content>
-								Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-								Et magna sit morbi lobortis.
-							</Card.Content>
-						</Card>
-					</li>
-					<li>
-						<Card icon={<BsBasket />} iconBackgroundColor="green">
-							<Card.Title>Easy Development</Card.Title>
-							<Card.Content>
-								Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-								Et magna sit morbi lobortis.
-							</Card.Content>
-						</Card>
-					</li>
-				</ul>
+				<div className="doc-columns">
+					<Card icon={<BsCode />}>
+						<Card.Title>Easy Development</Card.Title>
+						<Card.Content>
+							Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
+							magna sit morbi lobortis.
+						</Card.Content>
+					</Card>
+					<Card icon={<BsBasket />} iconBackgroundColor="green">
+						<Card.Title>Easy Shopping</Card.Title>
+						<Card.Content>
+							Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
+							magna sit morbi lobortis.
+						</Card.Content>
+					</Card>
+					<Card icon={<BsFillBookmarkCheckFill />} iconBackgroundColor="purple">
+						<Card.Title>Easy Reading</Card.Title>
+						<Card.Content>
+							Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
+							magna sit morbi lobortis.
+						</Card.Content>
+					</Card>
+				</div>
 			</section>
 			<section className="doc-section">
 				<h2>Testimonials</h2>
