@@ -9,9 +9,10 @@ export default function Tooltip({
 	className,
 	onClose,
 	onOpen,
+	open = false,
 	...rest
 }) {
-	const [open, setOpen] = useState(false);
+	const [_open, setOpen] = useState(open);
 	const firstRender = useRef(true);
 
 	const tooltipClasses = classNames("tooltip", className);
@@ -22,11 +23,11 @@ export default function Tooltip({
 			return;
 		}
 
-		open ? onOpen?.() : onClose?.();
-	}, [open, onOpen, onClose]);
+		_open ? onOpen?.() : onClose?.();
+	}, [_open, onOpen, onClose]);
 
 	return (
-		<TooltipContext.Provider value={{ open, setOpen }}>
+		<TooltipContext.Provider value={{ open: _open, setOpen }}>
 			<div className={tooltipClasses} {...rest}>
 				{children}
 			</div>

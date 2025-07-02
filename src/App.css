@@ -7,12 +7,12 @@
 	margin-bottom: 5rem;
 }
 
-.doc-section > ul {
+.doc-list {
 	list-style: none;
 	padding: 0;
 }
 
-.doc-section > ul > li {
+.doc-list > li {
 	margin-bottom: 1.5rem;
 }
 
@@ -22,17 +22,17 @@
 	gap: 1rem;
 }
 
-.doc-section-badge ul {
+.doc-list-tooltip {
+	padding-top: 6rem;
+}
+
+.doc-list-tooltip > li {
+	height: 10rem;
+	width: 25rem;
+}
+
+.doc-columns {
 	display: flex;
-	gap: 1rem;
-	flex-wrap: wrap;
-	padding: 0;
-}
-
-.doc-section-badge > ul > li {
-	margin-bottom: 0.5rem;
-}
-
-.doc-section-card > ul > li {
-	padding-bottom: 2rem;
+	flex-direction: row;
+	gap: 2rem;
 }

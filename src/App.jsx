@@ -15,10 +15,10 @@ function App() {
 	return (
 		<article className="doc-article">
 			<h1>Components</h1>
-			<section className="doc-section doc-section-badge">
+			<section className="doc-section">
 				<h2>Badges</h2>
 				<h3>Square</h3>
-				<ul>
+				<ul className="doc-list doc-list-horizontal">
 					<li>
 						<Badge shape="square" color="grey">
 							Badge
@@ -61,7 +61,7 @@ function App() {
 					</li>
 				</ul>
 				<h3>Pill</h3>
-				<ul>
+				<ul className="doc-list doc-list-horizontal">
 					<li>
 						<Badge shape="pill" color="grey">
 							Badge
@@ -104,10 +104,10 @@ function App() {
 					</li>
 				</ul>
 			</section>
-			<section className="doc-section doc-section-banner">
+			<section className="doc-section">
 				<h2>Banner</h2>
 				<h3>Multiline</h3>
-				<ul>
+				<ul className="doc-list">
 					<li>
 						<Banner variant="success">
 							<Banner.Title>Congratulations!</Banner.Title>
@@ -148,7 +148,7 @@ function App() {
 					</li>
 				</ul>
 				<h3>Singleline</h3>
-				<ul>
+				<ul className="doc-list">
 					<li>
 						<Banner variant="success">
 							<Banner.Title>Congratulations!</Banner.Title>
@@ -173,10 +173,10 @@ function App() {
 					</li>
 				</ul>
 			</section>
-			<section className="doc-section doc-section-card">
+			<section className="doc-sectio">
 				<h2>Card</h2>
 
-				<ul>
+				<ul className="doc-list">
 					<li>
 						<Card icon={<BsCloudUpload />}>
 							<Card.Title>Easy Development</Card.Title>
@@ -197,9 +197,9 @@ function App() {
 					</li>
 				</ul>
 			</section>
-			<section className="doc-section doc-section-testimonials">
+			<section className="doc-section">
 				<h2>Testimonials</h2>
-				<ul>
+				<ul className="doc-list">
 					<li>
 						<Testimonails backgroundColor="blue">
 							<Testimonails.Picture
@@ -254,10 +254,10 @@ function App() {
 					</li>
 				</ul>
 			</section>
-			<section className="doc-section doc-section-tooltip">
+			<section className="doc-section">
 				<h2>Tooltip (Work in progress)</h2>
 				<h3>Tooltip position</h3>
-				<ul className="doc-list-horizontal">
+				<ul className="doc-list doc-list-horizontal">
 					<li>
 						<Tooltip
 							onClose={() => console.log("Tooltip closed")}
@@ -328,128 +328,135 @@ function App() {
 				<h3>Tooltip color</h3>
 				{/* TODO: Talk to designer about colors, styles, states (warning, error, info...) */}
 				{/* TODO: Talk to designer about contrast to background (white tooltip) */}
-				<ul className="doc-list-horizontal">
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (black)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="black"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (white)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="white"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (bold-blue)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="bold-blue"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (light-blue)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="light-blue"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (bold-purple)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="bold-purple"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (light-purple)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="light-purple"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (bold-green)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="bold-green"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (light-green)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								variant="light-green"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-				</ul>
+				<div className="doc-columns">
+					<ul className="doc-list doc-list-tooltip">
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (black)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="black"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (bold-blue)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="bold-blue"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (bold-purple)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="bold-purple"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (bold-green)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="bold-green"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+					</ul>
+					<ul className="doc-list doc-list-tooltip">
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (white)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="white"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (light-blue)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="light-blue"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (light-purple)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="light-purple"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+
+						<li>
+							<Tooltip open={true}>
+								<Tooltip.Trigger>
+									<Button>Click me (light-green)</Button>
+								</Tooltip.Trigger>
+								<Tooltip.Content
+									title="Tooltip Title"
+									icon={<BsCloudUpload />}
+									variant="light-green"
+								>
+									This is a tooltip with some content. It can be used to provide
+									additional information.
+								</Tooltip.Content>
+							</Tooltip>
+						</li>
+					</ul>
+				</div>
 			</section>
 		</article>
 	);
