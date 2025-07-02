@@ -11,6 +11,7 @@
 	background-position: var(--banner-padding) var(--banner-padding);
 	background-size: var(--banner-icon-size);
 	background-repeat: no-repeat;
+	max-width: 80ch;
 }
 
 .banner > .banner-title {
