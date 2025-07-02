@@ -22,12 +22,9 @@
 	gap: 1rem;
 }
 
-.doc-list-tooltip {
-	padding-top: 6rem;
-}
-
 .doc-list-tooltip > li {
-	height: 10rem;
+	padding-top: 6rem;
+	margin-bottom: 2.5rem;
 	width: 25rem;
 }
 
@@ -35,4 +32,10 @@
 	display: flex;
 	flex-direction: row;
 	gap: 2rem;
+}
+
+@media (max-width: 768px) {
+	.doc-columns {
+		flex-direction: column;
+	}
 }
