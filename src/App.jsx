@@ -11,12 +11,15 @@ import Testimonails from "./components/Testimonials/index";
 import Tooltip from "./components/Tooltip/index";
 import "./App.css";
 import Button from "./components/Button/Button";
+import { ToastContainer, useToast } from "./components/Toast/index";
 
 import quotePersonSmall from "./assets/img/quote-person-small.jpeg";
 import quotePerson from "./assets/img/quote-person.jpeg";
 import logo from "./assets/svg/logo.svg";
 
 function App() {
+	const { showToast } = useToast();
+
 	return (
 		<article className="doc-article">
 			<h1>Components</h1>
@@ -469,6 +472,21 @@ function App() {
 					</ul>
 				</div>
 			</section>
+			<section className="doc-section">
+				<h2>Toast Popups (Work In Progress)</h2>
+				<ul className="doc-list doc-list-horizontal">
+					<li>
+						<Button
+							onClick={() =>
+								showToast("Notification", "This is a toast message!", "info")
+							}
+						>
+							Show Toast
+						</Button>
+					</li>
+				</ul>
+			</section>
+			<ToastContainer />
 		</article>
 	);
 }
