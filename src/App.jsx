@@ -263,7 +263,7 @@ function App() {
 				</ul>
 			</section>
 			<section className="doc-section">
-				<h2>Tooltip (Work in progress)</h2>
+				<h2>Tooltip</h2>
 				<h3>Tooltip position</h3>
 				<ul className="doc-list doc-list-horizontal">
 					<li>
@@ -284,6 +284,24 @@ function App() {
 							</Tooltip.Content>
 						</Tooltip>
 					</li>
+
+					<li>
+						<Tooltip>
+							<Tooltip.Trigger>
+								<Button>Click me (right)</Button>
+							</Tooltip.Trigger>
+							<Tooltip.Content
+								title="Tooltip Title"
+								icon={<BsCloudUpload />}
+								color="blue"
+								position="right"
+							>
+								This is a tooltip with some content. It can be used to provide
+								additional information.
+							</Tooltip.Content>
+						</Tooltip>
+					</li>
+
 					<li>
 						<Tooltip>
 							<Tooltip.Trigger>
@@ -300,6 +318,7 @@ function App() {
 							</Tooltip.Content>
 						</Tooltip>
 					</li>
+
 					<li>
 						<Tooltip>
 							<Tooltip.Trigger>
@@ -310,22 +329,6 @@ function App() {
 								icon={<BsCloudUpload />}
 								color="blue"
 								position="left"
-							>
-								This is a tooltip with some content. It can be used to provide
-								additional information.
-							</Tooltip.Content>
-						</Tooltip>
-					</li>
-					<li>
-						<Tooltip>
-							<Tooltip.Trigger>
-								<Button>Click me (right)</Button>
-							</Tooltip.Trigger>
-							<Tooltip.Content
-								title="Tooltip Title"
-								icon={<BsCloudUpload />}
-								color="blue"
-								position="right"
 							>
 								This is a tooltip with some content. It can be used to provide
 								additional information.

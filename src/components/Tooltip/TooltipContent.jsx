@@ -19,6 +19,7 @@ export default function TooltipContent({
 	const { open, setOpen } = useContext(TooltipContext);
 
 	// Simple adjustment of the position of the tooltip if it goes out of bounds
+	// TODO: Improve out of bounds detection and adjustment
 	useLayoutEffect(() => {
 		if (!tooltipRef.current) return;
 
