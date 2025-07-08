@@ -6,7 +6,7 @@ export default function ToastDoc() {
 
 	return (
 		<section className="doc-section">
-			<h2>Toast Popups (Work In Progress)</h2>
+			<h2>Toast Popups</h2>
 			<ul className="doc-list doc-list-horizontal">
 				<li>
 					<Button
@@ -18,7 +18,7 @@ export default function ToastDoc() {
 							)
 						}
 					>
-						Show Toast (Info)
+						Show information toast
 					</Button>
 				</li>
 				<li>
@@ -27,7 +27,7 @@ export default function ToastDoc() {
 							showToast("Success", "Your work has been saved", "success")
 						}
 					>
-						Show Toast (Success)
+						Show success toast
 					</Button>
 				</li>
 				<li>
@@ -36,7 +36,7 @@ export default function ToastDoc() {
 							showToast("Warning", "A network error was detected", "warning")
 						}
 					>
-						Show Toast (Warning)
+						Show warning toast
 					</Button>
 				</li>
 				<li>
@@ -45,7 +45,7 @@ export default function ToastDoc() {
 							showToast("Error", "Please re-save your work again", "error")
 						}
 					>
-						Show Toast (Error)
+						Show error toast
 					</Button>
 				</li>
 			</ul>
