@@ -11,10 +11,41 @@ export default function ToastDoc() {
 				<li>
 					<Button
 						onClick={() =>
-							showToast("Notification", "This is a toast message!", "info")
+							showToast(
+								"Information",
+								"Please read updated information",
+								"info",
+							)
 						}
 					>
-						Show Toast
+						Show Toast (Info)
+					</Button>
+				</li>
+				<li>
+					<Button
+						onClick={() =>
+							showToast("Success", "Your work has been saved", "success")
+						}
+					>
+						Show Toast (Success)
+					</Button>
+				</li>
+				<li>
+					<Button
+						onClick={() =>
+							showToast("Warning", "A network error was detected", "warning")
+						}
+					>
+						Show Toast (Warning)
+					</Button>
+				</li>
+				<li>
+					<Button
+						onClick={() =>
+							showToast("Error", "Please re-save your work again", "error")
+						}
+					>
+						Show Toast (Error)
 					</Button>
 				</li>
 			</ul>
