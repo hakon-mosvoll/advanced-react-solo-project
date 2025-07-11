@@ -4,6 +4,7 @@
 	right: 0;
 	width: 400px;
 	padding: 1rem;
+	z-index: 2000;
 }
 
 .toast {
