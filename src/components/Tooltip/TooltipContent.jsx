@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useId, useLayoutEffect, useRef, useState } from "react";
+import { useId, useRef } from "react";
 import { useContext } from "react";
 import { BsX } from "react-icons/bs";
 import { TooltipContext } from "./Tooltip";
@@ -14,41 +14,14 @@ export default function TooltipContent({
 	...rest
 }) {
 	const tooltipRef = useRef(null);
-	const [adjustedPosition, setAdjustedPosition] = useState(position);
 	const titleId = useId();
 	const { open, setOpen } = useContext(TooltipContext);
 
-	// Simple adjustment of the position of the tooltip if it goes out of bounds
-	// TODO: Improve out of bounds detection and adjustment
-	useLayoutEffect(() => {
-		if (!tooltipRef.current) return;
-
-		if (!open) {
-			setAdjustedPosition(position);
-			return;
-		}
-
-		const rect = tooltipRef.current.getBoundingClientRect();
-		const { innerWidth, innerHeight } = window;
-
-		let newPosition = position;
-
-		if (position === "top" && rect.top < 0) {
-			newPosition = "bottom";
-		} else if (position === "bottom" && rect.bottom > innerHeight) {
-			newPosition = "top";
-		} else if (position === "left" && rect.left < 0) {
-			newPosition = "right";
-		} else if (position === "right" && rect.right > innerWidth) {
-			newPosition = "left";
-		}
-
-		setAdjustedPosition(newPosition);
-	}, [open, position]);
+	// TODO: Add out of bounds detection and adjustment
 
 	const tooltipContentClasses = classNames("tooltip-content", className, {
 		"tooltip-content-open": open,
-		[`tooltip-content-${adjustedPosition}`]: adjustedPosition,
+		[`tooltip-content-${position}`]: position,
 		[`tooltip-content-${variant}`]: variant,
 	});
 
